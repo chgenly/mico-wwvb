@@ -47,3 +47,18 @@ I used [Osh Park](https://oshpark.com) as my fabrication service.  They accept K
 [micro-wwvb-post]: https://www.anishathalye.com/2016/12/26/micro-wwvb/
 
 [KiCad]: https://www.kicad.org/
+
+## ATTiny44a-SSUR
+
+AVR family of processors.  8 bit risc architecture.
+
+14 pin Dual inline package
+Surfuce mount device
+
+Just notes an decoding the suffix.
+
+4KiB flash
+SS - 14S1 package
+U - Matte tin
+R - Tape and real
+14S1 - 14-lead, 3.90 mm Narrow Body, Plastic Small Outline Package (SOIC)
