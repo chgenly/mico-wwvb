@@ -4,6 +4,10 @@
 to automatically set the time on radio synchronized clocks and wristwatches where the regular [WWVB] signal isn’t available. The system acquires
 the correct time via GPS.
 
+![alt text](images/schematic.png)
+
+![alt text](images/board.png)
+
 ## Anish Athalye's project
 
 I started with this 2016 github project.
