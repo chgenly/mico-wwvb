@@ -29,7 +29,7 @@ also pleased to discover online services which would accept [gerber files](https
 
 For my open source schematic/PCB editor I chose [KiCad].  I had never used it before.  So there was a bit of a learning curve.
 
-### autoroutin
+### autorouting
 Install the Freerouting plugin.
 1. Open KiCad Project Manager
 1. Click on Plugin and Content Manager
@@ -38,6 +38,10 @@ Install the Freerouting plugin.
 1. Click on Apply Pending Changes.
 1. You will have to have Java installed for it to work.
 
+
+## PCB fabrication service
+
+I used [Osh Park](https://oshpark.com) as my fabrication service.  They accept KiCad pcb files directly.  No need to export to gerber files.  The are the cheapest service I could fine.  Interestingly, they just happen to be local to me.
 
 [WWVB]: https://www.nist.gov/pml/time-and-frequency-division/radio-stations/wwvb
 [micro-wwvb-post]: https://www.anishathalye.com/2016/12/26/micro-wwvb/
