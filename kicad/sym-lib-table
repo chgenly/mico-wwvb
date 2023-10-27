@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "local-attiny")(type "KiCad")(uri "${KIPRJMOD}/libraries/attyiny44-ssur/2023-10-18_23-32-57.kicad_sym")(options "")(descr ""))
+  (lib (name "local-SM06B_SRSS_TB")(type "KiCad")(uri "${KIPRJMOD}/libraries/SM06B_SRSS_TB/2023-10-21_03-37-41.kicad_sym")(options "")(descr ""))
+  (lib (name "local-crystal")(type "Legacy")(uri "${KIPRJMOD}/libraries/crystal/ABM3-20.000MHZ-B2-T.lib")(options "")(descr ""))
+  (lib (name "local-avrisp")(type "KiCad")(uri "${KIPRJMOD}/libraries/avrisp_smd_10125394-T0803ALF/10125394-T0803ALF.kicad_sym")(options "")(descr ""))
+  (lib (name "local-2_pin_hdr-TSM-103-01-T-SV-002")(type "KiCad")(uri "${KIPRJMOD}/libraries/2_pin_hdr_TSM-103-01-T-SV-002/TSM-103-01-T-SV-002.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,7 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "local-attiny")(type "KiCad")(uri "${KIPRJMOD}/libraries/attyiny44-ssur/footprints.pretty")(options "")(descr ""))
+  (lib (name "local-SM06B_SRSS_TB")(type "KiCad")(uri "${KIPRJMOD}/libraries/SM06B_SRSS_TB/footprints.pretty")(options "")(descr ""))
+  (lib (name "local-crystal")(type "KiCad")(uri "${KIPRJMOD}/libraries/crystal")(options "")(descr ""))
+  (lib (name "local-ispsmd")(type "KiCad")(uri "${KIPRJMOD}/libraries/avrisp_smd_10125394-T0803ALF")(options "")(descr ""))
+)
