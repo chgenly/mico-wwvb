@@ -66,3 +66,20 @@ SS - 14S1 package
 U - Matte tin
 R - Tape and real
 14S1 - 14-lead, 3.90 mm Narrow Body, Plastic Small Outline Package (SOIC)
+
+## Software
+
+The WWVB signal sends one bit of data for one second.  60 seconds are required to send all the bits for the time.
+- 0: Power reduced for .2 seconds.
+- 1: Power reduced for .5 seconds.
+- mark: Power reduced for .8 seconds.
+
+The 60 khz signal is generated using the ATTiny's counter1, and wave form generator.
+The pulse width modulation output, PA5 (pin 8), is used to generate the 60khz signal.
+The software divides a second into two parts.  The first part is the reduced power signal.  Reduced power in our case means no signal is sent.  The second part is full power signal.  Here a 50% duty cycle signal is sent.
+
+Actually, a 20 khz signal is generated.  We depend on the third harmonic.  Apparently Anish found this more effective.
+
+Timing for how long a signal is sent or not is accomplished using a library routine to delay a certain number of clock cycles.
+
+During the full power signal, the blue led is turned on. The led is connected to PA7 (pin 6).
