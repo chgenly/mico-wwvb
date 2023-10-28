@@ -394,7 +394,8 @@
       "local-SM06B_SRSS_TB",
       "local-crystal",
       "local-ispsmd",
-      "local-2_pin_header"
+      "local-2_pin_header",
+      "local-TSM_103"
     ],
     "pinned_symbol_libs": [
       "attiny-local",

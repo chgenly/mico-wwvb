@@ -4,4 +4,5 @@
   (lib (name "local-SM06B_SRSS_TB")(type "KiCad")(uri "${KIPRJMOD}/libraries/SM06B_SRSS_TB/footprints.pretty")(options "")(descr ""))
   (lib (name "local-crystal")(type "KiCad")(uri "${KIPRJMOD}/libraries/crystal")(options "")(descr ""))
   (lib (name "local-ispsmd")(type "KiCad")(uri "${KIPRJMOD}/libraries/avrisp_smd_10125394-T0803ALF")(options "")(descr ""))
+  (lib (name "local-TSM_103")(type "KiCad")(uri "${KIPRJMOD}/libraries/3_pin_hdr_TSM_103_01_L_SV_TR")(options "")(descr ""))
 )
