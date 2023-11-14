@@ -91,7 +91,7 @@ The software divides a second into two parts.  The first part is the reduced pow
 Actually, a 20 khz signal is generated.  We depend on the third harmonic.  Apparently Anish found this more effective.
 
 Timing for the signal is accomplished using a library routine to delay a certain number of milliseconds. I believe the millisecond
-delay is trasformed to a cycl count delay.
+delay is trasformed to a cycle count delay.
 
 During the full power signal, the blue led is turned on. The led is connected to PA7 (pin 6).
 
@@ -100,4 +100,115 @@ During the full power signal, the blue led is turned on. The led is connected to
 | microwwvb.c | Top level.  init, get time, transmit time.|
 | gps.c       | Send and receive GPS module commands.     |
 | hardware.h  | Constants for LEDs, serial port           |
-| serial.c    | Functions to send and receive ascii data. |
+| serial.c    | Send and receive ascii data. |
+| led.c       | Show status on LEDs                       |
+
+## Programming
+
+For a description of using an arduino to program the micro-wwvb board see:
+
+https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP
+
+Here are the steps to use the arduino to program the micro-wwvb board.
+
+1. Wire the Arduino to the micro-wwvb.
+1. Program the Arduino as ISP.
+1. Test program to make blue and green leds flash.
+1. Update src/makefile
+1. Program micro-wwvb
+
+### Wire Arduino to the micro-wwvb
+
+micro-wwwvb pin header
+<pre>
+| miso  | vcc  |
+| sck   | mosi |
+| reset | gnd  |
+</pre>
+
+You'll need six male to female cables.
+
+- miso - arduino 12
+- sck - adruino 13
+- reset - arduino 10
+- vcc - arduino 5v
+- mosi - arduino 11
+- gnd - arduino gnd
+
+Make sure to disconnnect the ferrite loop antenna during programming.
+
+### Program the Arduino as ISP
+
+- Connect Arduino uno to your laptop
+- Start adrduino ide
+- Select board: arduino uno
+- Select comm: comm3 (for me)
+- File / Examples/ Arduino ISP /ArduinoISP
+- Upload
+
+## Test program to make blue and green leds flash
+
+- File / Preferences
+  - Select Show verbose output during compile and upload.
+- Use the following sketch
+- Select board: attiny44
+- Select comm: comm3 (for me)
+- Tools / Programmer / arduino as ISP
+- Sketch / Upload using programmer
+
+```c
+// Flash blue and green LEDS.  Blue is on when green is off.
+void setup() {
+  pinMode(PA1, OUTPUT);
+  pinMode(PA7, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(PA1, HIGH); 
+  digitalWrite(PA7, LOW); 
+  delay(100);
+  digitalWrite(PA1, LOW);
+  digitalWrite(PA7, HIGH);
+  delay(100);
+```
+
+### Update src/makefile
+
+The reason you turned on verbose mode in the previous step
+was so you could see paths to various tools.  Look in the output window and look for the path to avr-gcc, avrdude, and avrdude-conf.
+Then set the variables at the top of src/Makefile.
+
+| Variable | Comment|
+|----------|------------------------------------------------------|
+| GBIN     | Should point to the directory containing avr-gcc.exe |
+| DCONF    | Should point to avrdude.conf                         |
+| DBIN     | Should be the directory containing avrdude.exe       
+
+### Program micro-wwvb
+
+Goto the src directory and run make.  I used cygwin make.
+
+- make program-fuses
+- make program
+
+## LEDs
+
+The LEDS will indicated status
+
+| Time | LED states |
+|------|-----|
+| Program startup / top of loop                                          | Green and blue on for .1 seconds |
+| Waiting for start bit from GPS modules                                 | Green  |
+| Searching for the '$' at the start of the response from the GPS module | Blue |
+| Complete response received from GPS module                             | Green on |
+| Failure to receive expected response from GPS module                   | Green on for .1 seconds. |
+| While transmitting WWVB signal                                         | Blue on for powered portion of the signal |
+
+After startup, if the green light is stuck on,
+you are not receiving anything from the GPS module.
+
+After startup, if the blue light is stuck on, 
+you are receiving something from the GPS module, but the Initial '$' isn't being received.
+
+If everything is working, you should see the Green light go solid, and the blue light flash.
+

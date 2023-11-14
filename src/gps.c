@@ -1,4 +1,5 @@
 #include "gps.h"
+#include "led.h"
 
 #define NMEA_MAX_MSG_LENGTH 82 // including starting '$' and ending '\n'
 
@@ -70,9 +71,10 @@ int gps_get_time(
     // TODO have some kind of timeout (maybe the caller should set that up, though)
 
     // wait for '$' character
+    led_begin_wait_for_dollar();
     while (serial_get_char(pin, pin_num, rate) != '$') {
-        // busy wait
     }
+    led_end_wait_for_dollar();
 
     // get rest of message
     static char nmea_buf[NMEA_MAX_MSG_LENGTH];

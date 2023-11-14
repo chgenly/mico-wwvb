@@ -12,6 +12,7 @@
 #include "serial.h"
 #include "gps.h"
 #include "hardware.h"
+#include "led.h"
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -46,6 +47,7 @@ int main() {
     int hour, minute, second, day, month, year;
 
     while (1) {
+        led_loop_top();
         int ret = gps_get_time(
             &GPS_PORT,
             GPS_PORT_NUM,
@@ -60,8 +62,9 @@ int main() {
             &second
         );
         if (ret < 0) {
+            LED_G_PORT |= (1 << LED_G_PORT_NUM); // got lock
+            _delay_ms(100);
             LED_G_PORT &= ~ (1 << LED_G_PORT_NUM);
-            _delay_ms(500);
             continue; // failed, try again
         }
 

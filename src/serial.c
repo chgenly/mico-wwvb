@@ -1,4 +1,5 @@
 #include "serial.h"
+#include "led.h"
 #include <util/delay.h>
 
 #if (F_CPU != 20000000)
@@ -25,12 +26,13 @@ char serial_get_char(
     char byte = 0;
 
     // wait for start bit
+    led_begin_wait_for_start_bit();
     while (READ_PIN(pin, num)) {
-        // busy wait
     }
-
+    led_end_wait_for_start_bit();
+    
     bit_delay(rate); // skip start bit
-    half_bit_delay(rate); // wiat for middle of first bit
+    half_bit_delay(rate); // wait for middle of first bit
 
     // unrolled loop to read 8 bits of data
     byte |= READ_PIN(pin, num) << 0;
