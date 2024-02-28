@@ -5,6 +5,10 @@
 //
 // Copyright (c) Anish Athalye
 
+// Define this if the gps module should
+// be ignored, and we just send a fixed time.
+#define SEND_TEST
+
 #if (F_CPU != 20000000)
 #error "Only 20 MHz CPU supported"
 #endif
@@ -18,8 +22,11 @@
 
 #define GPS_UPDATE_FREQ (10) // once every GPS_UPDATE_FREQ minutes
 
-#define ICR1_SETPOINT (999)
-#define HIGH (500) // 50% duty cycle
+//For 20 khz
+// #define ICR1_SETPOINT (999)
+// For 60 khz
+#define ICR1_SETPOINT (332)
+#define HIGH (ICR1_SETPOINT/2) // 50% duty cycle
 #define LOW (0) // 0% duty cycle
 
 static inline void init();
@@ -48,6 +55,7 @@ int main() {
 
     while (1) {
         led_loop_top();
+#ifndef SEND_TEST
         int ret = gps_get_time(
             &GPS_PORT,
             GPS_PORT_NUM,
@@ -62,12 +70,26 @@ int main() {
             &second
         );
         if (ret < 0) {
-            LED_G_PORT |= (1 << LED_G_PORT_NUM); // got lock
+            G_ON;
             _delay_ms(100);
-            LED_G_PORT &= ~ (1 << LED_G_PORT_NUM);
+            G_OFF;
             continue; // failed, try again
         }
+#else
+        // hour = 10;
+        // minute = 7;
+        // second = 58;
+        // day = 24;
+        // month = 11;
+        // year = 2023;
 
+        hour = 0;
+        minute = 15;
+        second = 58;
+        day = 1;
+        month = 12;
+        year = 2023;
+#endif
         LED_G_PORT |= (1 << LED_G_PORT_NUM); // got lock
         broadcast_time(hour, minute, second, day, month, year, GPS_UPDATE_FREQ);
     }
@@ -88,7 +110,7 @@ static inline void broadcast_time(
     int dst = is_daylight_savings_time(day, month, year);
     while (1) {
         // compute bit
-        unsigned char bit; // 2 = mark, 1 = "1", 0 = "0"
+        unsigned char bit=0; // 2 = mark, 1 = "1", 0 = "0"
         switch (second) {
             case 0: // mark
                 bit = 2;
@@ -272,6 +294,9 @@ static inline void broadcast_time(
                 break;
         }
 
+        if (second == 0)
+            G_OFF;
+
         // transmit bit
         if (bit == 0) {
             gen_zero();
@@ -280,6 +305,9 @@ static inline void broadcast_time(
         } else {
             gen_mark();
         }
+
+        if (second == 0)
+            G_ON;
 
         // increment time (or give up and ask GPS for a new time)
         if (++second >= 60) {
@@ -362,9 +390,9 @@ static inline void init() {
 
     // for LEDs
     LED_G_PORT_DDR |= (1 << LED_G_PORT_NUM); // set to an output port
-    LED_G_PORT &= ~ (1 << LED_G_PORT_NUM); // turn off
+    G_OFF; // turn off
     LED_B_PORT_DDR |= (1 << LED_B_PORT_NUM); // set to an output port
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM); // turn off
+    B_OFF; // turn off
 
     // for antenna
     // initialize non-inverting fast PWM on OC1B (PA5)
@@ -387,33 +415,33 @@ static inline void init() {
 
 static inline void gen_mark() {
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
     _delay_ms(800);
     OCR1B = HIGH;
-    LED_B_PORT |= (1 << LED_B_PORT_NUM);
+    B_ON;
     _delay_ms(200);
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
 }
 
 static inline void gen_zero() {
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
     _delay_ms(200);
     OCR1B = HIGH;
-    LED_B_PORT |= (1 << LED_B_PORT_NUM);
+    B_ON;
     _delay_ms(800);
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
 }
 
 static inline void gen_one() {
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
     _delay_ms(500);
     OCR1B = HIGH;
-    LED_B_PORT |= (1 << LED_B_PORT_NUM);
+    B_ON;
     _delay_ms(500);
     OCR1B = LOW;
-    LED_B_PORT &= ~ (1 << LED_B_PORT_NUM);
+    B_OFF;
 }

@@ -5,6 +5,9 @@
 
 void led_loop_top();
 
+void flash_green();
+void flash_blue();
+
 void led_begin_wait_for_start_bit();
 void led_end_wait_for_start_bit();
 void led_begin_wait_for_dollar();

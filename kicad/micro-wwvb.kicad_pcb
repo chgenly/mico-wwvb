@@ -1382,7 +1382,7 @@
   (gr_text "GPS" (at 151.13 87.63) (layer "F.SilkS") (tstamp cb5cf2e2-4eee-4e0c-b7b5-4b3428efc4fd)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
-  (gr_text "Antenna" (at 160.02 76.835) (layer "F.SilkS") (tstamp da4b7c69-c566-41ae-ab36-41dd6030f0a8)
+  (gr_text "Antenna" (at 161.29 76.835) (layer "F.SilkS") (tstamp da4b7c69-c566-41ae-ab36-41dd6030f0a8)
     (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
 

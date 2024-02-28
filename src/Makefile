@@ -29,7 +29,7 @@ CFLAGS := -mmcu=$(MMCU) -flto -Os -DF_CPU=$(F_CPU) -std=c99 \
 	-Wall -Wextra -pedantic -Werror
 
 $(PROJECT).hex: $(PROJECT).out
-	$(GBIN)/avr-objcopy -O ihex $(PROJECT).out $(PROJECT).hex;\
+	$(GBIN)/avr-objcopy -O ihex $(PROJECT).out $(PROJECT).hex
 	$(GBIN)/avr-size --mcu=$(MMCU) --format=avr $(PROJECT).out
 
 $(PROJECT).out: $(SOURCES) $(HEADERS)

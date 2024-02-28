@@ -69,7 +69,7 @@ Just notes an decoding the suffix.
 
 ## WWVB signal
 
-WWVB transmit on 60 khz for atomic watches and clocks. One bit of data is sent once evvery second.
+WWVB transmit on 60 khz for atomic watches and clocks. One bit of data is sent once every second.
 60 seconds are required to send all the bits for the time.
 - 0: Power reduced for .2 seconds.
 - 1: Power reduced for .5 seconds.
@@ -119,7 +119,7 @@ Here are the steps to use the arduino to program the micro-wwvb board.
 
 ### Wire Arduino to the micro-wwvb
 
-micro-wwwvb pin header
+micro-wwwvb pin header, as seen when the usb connector is on the left.
 <pre>
 | miso  | vcc  |
 | sck   | mosi |
@@ -152,7 +152,9 @@ Make sure to disconnnect the ferrite loop antenna during programming.
   - Select Show verbose output during compile and upload.
 - Use the following sketch
 - Select board: attiny44
-- Select comm: comm3 (for me)
+- Select comm: com3 (for me)
+  - You can use the windows device manager to help you find
+    the com.  Look under Ports.
 - Tools / Programmer / arduino as ISP
 - Sketch / Upload using programmer
 
@@ -212,3 +214,10 @@ you are receiving something from the GPS module, but the Initial '$' isn't being
 
 If everything is working, you should see the Green light go solid, and the blue light flash.
 
+# Debug
+
+Download avr8 toolchain.  This will provide gdb.
+https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers
+
+PlatformIO IDE extension
+Embedded: Atmel AVR
