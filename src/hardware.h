@@ -7,10 +7,10 @@
 #define GPS_BAUD_RATE BAUD_RATE_4800
 #define GPS_PORT PORTA
 #define GPS_PORT_DDR DDRA
-#define GPS_PORT_NUM PA2
+#define GPS_PORT_NUM PA3
 #define GPS_PIN PINA
 #define GPS_PIN_DDR DDRA
-#define GPS_PIN_NUM PB3
+#define GPS_PIN_NUM PA2
 
 #define LED_G_PORT PORTA
 #define LED_G_PORT_DDR DDRA

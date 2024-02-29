@@ -1284,8 +1284,8 @@
   (junction (at 147.32 105.41) (diameter 0) (color 0 0 0 0)
     (uuid 5725b2b9-d2e4-49f8-aac8-af076f54f177)
   )
-  (junction (at 212.09 92.71) (diameter 0) (color 0 0 0 0)
-    (uuid 8947b955-6ba3-4e1f-8d59-275584bc43f5)
+  (junction (at 210.82 95.25) (diameter 0) (color 0 0 0 0)
+    (uuid 863c84ee-a984-417c-ad42-2b9cc83e59ca)
   )
   (junction (at 184.15 123.19) (diameter 0) (color 0 0 0 0)
     (uuid 92095173-4fff-4ef5-8167-23d92b06ad6a)
@@ -1309,6 +1309,8 @@
     (uuid fa8abfdd-37aa-4d0a-b3b9-aa78100a458d)
   )
 
+  (no_connect (at 214.63 82.55) (uuid c192af97-f16f-4a74-ac22-e8eb1be75d67))
+
   (wire (pts (xy 207.01 62.23) (xy 209.55 62.23))
     (stroke (width 0) (type default))
     (uuid 068841c4-44e0-41ea-8690-5c9fe7063ddb)
@@ -1317,7 +1319,7 @@
     (stroke (width 0) (type default))
     (uuid 077d9f29-d063-4d62-bb9c-c2c65dcc9f7b)
   )
-  (wire (pts (xy 212.09 92.71) (xy 212.09 82.55))
+  (wire (pts (xy 210.82 95.25) (xy 210.82 85.09))
     (stroke (width 0.1524) (type solid))
     (uuid 082673b3-7d0f-44d2-ae9b-0cf55e250d35)
   )
@@ -1328,10 +1330,6 @@
   (wire (pts (xy 227.33 135.89) (xy 234.95 135.89))
     (stroke (width 0) (type default))
     (uuid 0b8f2604-e529-4e8e-a6c8-d358729bc59c)
-  )
-  (wire (pts (xy 205.74 87.63) (xy 214.63 87.63))
-    (stroke (width 0) (type default))
-    (uuid 0d0b10df-7a83-4d96-883c-dce2b93080ef)
   )
   (wire (pts (xy 93.98 142.24) (xy 100.33 142.24))
     (stroke (width 0.1524) (type solid))
@@ -1373,10 +1371,6 @@
     (stroke (width 0) (type default))
     (uuid 275f49dd-b3d5-4497-b3e7-24e6292f73cc)
   )
-  (wire (pts (xy 205.74 90.17) (xy 214.63 90.17))
-    (stroke (width 0) (type default))
-    (uuid 2868df6e-d63d-4f8c-a0f5-808bd1fcb86b)
-  )
   (wire (pts (xy 198.12 100.33) (xy 198.12 107.95))
     (stroke (width 0) (type default))
     (uuid 2db036b4-7f0e-40e2-935c-6ec5889988a7)
@@ -1385,7 +1379,7 @@
     (stroke (width 0) (type default))
     (uuid 2dd90a60-7b51-492e-be50-ba8860abae7b)
   )
-  (wire (pts (xy 204.47 78.74) (xy 204.47 85.09))
+  (wire (pts (xy 204.47 78.74) (xy 204.47 92.71))
     (stroke (width 0) (type default))
     (uuid 2e411888-477f-4282-8a04-9d7bc6c979e2)
   )
@@ -1405,6 +1399,14 @@
     (stroke (width 0) (type default))
     (uuid 368ce1f5-7cf7-4817-b830-411e3629821e)
   )
+  (wire (pts (xy 194.31 87.63) (xy 196.85 90.17))
+    (stroke (width 0) (type default))
+    (uuid 3f13e3f9-e11a-4f2b-8b36-ad4c6e9c626a)
+  )
+  (wire (pts (xy 204.47 97.79) (xy 204.47 95.25))
+    (stroke (width 0) (type default))
+    (uuid 4252a731-9439-4ea2-a7ee-26c3f4289dbe)
+  )
   (wire (pts (xy 161.29 115.57) (xy 161.29 118.11))
     (stroke (width 0) (type default))
     (uuid 43dd3b68-36e5-4328-8f37-0b094a97be7b)
@@ -1412,10 +1414,6 @@
   (wire (pts (xy 137.16 120.65) (xy 137.16 113.03))
     (stroke (width 0) (type default))
     (uuid 450cc3f2-a511-4c42-9fd0-6c0c2fb60885)
-  )
-  (wire (pts (xy 204.47 92.71) (xy 212.09 92.71))
-    (stroke (width 0.1524) (type solid))
-    (uuid 46add9b3-edbc-4582-8ebf-f4588765d03c)
   )
   (wire (pts (xy 212.09 147.32) (xy 220.98 147.32))
     (stroke (width 0) (type default))
@@ -1425,10 +1423,6 @@
     (stroke (width 0) (type default))
     (uuid 4a99f9d8-6093-47dd-ae96-f1bdd8fd69d1)
   )
-  (wire (pts (xy 212.09 82.55) (xy 214.63 82.55))
-    (stroke (width 0.1524) (type solid))
-    (uuid 4b0fac1f-93b3-4829-bef4-168df5077191)
-  )
   (wire (pts (xy 130.81 144.78) (xy 130.81 142.24))
     (stroke (width 0.1524) (type solid))
     (uuid 506c39e8-eb6e-4226-a39d-33fe7310804d)
@@ -1437,9 +1431,9 @@
     (stroke (width 0) (type default))
     (uuid 51232f1c-7aa0-4b42-be65-d69289be583c)
   )
-  (wire (pts (xy 214.63 92.71) (xy 212.09 92.71))
-    (stroke (width 0.1524) (type solid))
-    (uuid 5348353a-161f-4917-9b51-f96913db7595)
+  (wire (pts (xy 196.85 87.63) (xy 214.63 87.63))
+    (stroke (width 0) (type default))
+    (uuid 57d10033-e1d3-4dcb-93cd-a093f30be5f4)
   )
   (wire (pts (xy 154.94 118.11) (xy 161.29 118.11))
     (stroke (width 0) (type default))
@@ -1473,10 +1467,6 @@
     (stroke (width 0) (type default))
     (uuid 75f62394-f3bc-47b2-bb4e-3a4111624d6a)
   )
-  (wire (pts (xy 203.2 87.63) (xy 205.74 90.17))
-    (stroke (width 0) (type default))
-    (uuid 7c4c88bc-4e8d-4767-aff5-3572e4518114)
-  )
   (wire (pts (xy 171.45 123.19) (xy 184.15 123.19))
     (stroke (width 0.1524) (type solid))
     (uuid 82b8350b-5d3c-42cc-babe-b7bb1699e79c)
@@ -1485,21 +1475,17 @@
     (stroke (width 0) (type default))
     (uuid 84b272c3-ad40-4d89-a35c-6e3433e723a1)
   )
-  (wire (pts (xy 214.63 85.09) (xy 204.47 85.09))
-    (stroke (width 0) (type default))
-    (uuid 85dd2af3-ca95-42ba-8f74-0cff5f444407)
-  )
-  (wire (pts (xy 205.74 87.63) (xy 203.2 90.17))
-    (stroke (width 0) (type default))
-    (uuid 868d550f-7d9c-4ab9-9d03-2ef3e5add082)
+  (wire (pts (xy 204.47 95.25) (xy 210.82 95.25))
+    (stroke (width 0.1524) (type solid))
+    (uuid 8b8bd910-2733-4e55-be65-5d3757216112)
   )
   (wire (pts (xy 140.97 132.08) (xy 97.79 132.08))
     (stroke (width 0) (type default))
     (uuid 8fa22343-a38a-4c04-a658-ae32ad424d44)
   )
-  (wire (pts (xy 137.16 90.17) (xy 203.2 90.17))
+  (wire (pts (xy 194.31 90.17) (xy 196.85 87.63))
     (stroke (width 0) (type default))
-    (uuid 92587b55-9552-4941-b41f-f8403a7f8468)
+    (uuid 91af7377-df35-4a32-93a9-17eb60627858)
   )
   (wire (pts (xy 160.02 105.41) (xy 161.29 105.41))
     (stroke (width 0) (type default))
@@ -1517,6 +1503,10 @@
     (stroke (width 0) (type default))
     (uuid a02aff2c-1001-48eb-a41c-ae55c3266451)
   )
+  (wire (pts (xy 196.85 90.17) (xy 214.63 90.17))
+    (stroke (width 0) (type default))
+    (uuid a55c09d8-af6e-41fe-b20e-4193f360a4f7)
+  )
   (wire (pts (xy 154.94 118.11) (xy 154.94 120.65))
     (stroke (width 0) (type default))
     (uuid a90cd0d6-8463-4138-a886-0cef20e53a05)
@@ -1525,9 +1515,9 @@
     (stroke (width 0) (type default))
     (uuid aa103846-3db3-4c06-9d7f-a751789f6e18)
   )
-  (wire (pts (xy 204.47 92.71) (xy 204.47 95.25))
+  (wire (pts (xy 137.16 87.63) (xy 194.31 87.63))
     (stroke (width 0) (type default))
-    (uuid ac79a7ac-78dc-44b9-ac34-62a5ee39cd10)
+    (uuid ad0daaa7-efd5-4172-8945-777420a60352)
   )
   (wire (pts (xy 93.98 120.65) (xy 137.16 120.65))
     (stroke (width 0) (type default))
@@ -1541,6 +1531,10 @@
     (stroke (width 0.1524) (type solid))
     (uuid b08b03a8-826b-4876-80e7-51acb7412caf)
   )
+  (wire (pts (xy 210.82 95.25) (xy 214.63 95.25))
+    (stroke (width 0) (type default))
+    (uuid b0eb1424-5581-4e89-9242-4b8cea8cf906)
+  )
   (wire (pts (xy 137.16 109.22) (xy 137.16 107.95))
     (stroke (width 0) (type default))
     (uuid b2702ecb-5553-4fd8-acb6-3f4597ee2013)
@@ -1548,6 +1542,10 @@
   (wire (pts (xy 220.98 147.32) (xy 227.33 147.32))
     (stroke (width 0) (type default))
     (uuid b523e8a1-6874-437f-845c-836b22cd7ff7)
+  )
+  (wire (pts (xy 137.16 90.17) (xy 194.31 90.17))
+    (stroke (width 0) (type default))
+    (uuid b876673d-4e6c-458b-9790-f574a73b1d64)
   )
   (wire (pts (xy 121.92 123.19) (xy 121.92 120.65))
     (stroke (width 0) (type default))
@@ -1564,10 +1562,6 @@
   (wire (pts (xy 102.87 123.19) (xy 102.87 125.73))
     (stroke (width 0) (type default))
     (uuid c3a737fe-3a3c-49ff-8067-e9aa5baa6d1c)
-  )
-  (wire (pts (xy 137.16 87.63) (xy 203.2 87.63))
-    (stroke (width 0) (type default))
-    (uuid c3e51689-4862-4b63-aa4e-85f96c86232d)
   )
   (wire (pts (xy 104.14 57.15) (xy 104.14 60.96))
     (stroke (width 0) (type default))
@@ -1617,6 +1611,14 @@
     (stroke (width 0.1524) (type solid))
     (uuid e525b787-c9c9-423a-9e37-a2b52bd6e1f7)
   )
+  (wire (pts (xy 204.47 92.71) (xy 214.63 92.71))
+    (stroke (width 0) (type default))
+    (uuid e9bd9cf8-57a6-4d18-96c9-1e1c5be4aee6)
+  )
+  (wire (pts (xy 214.63 85.09) (xy 210.82 85.09))
+    (stroke (width 0) (type default))
+    (uuid f012dad2-9008-4534-9e5b-356dc83c0341)
+  )
   (wire (pts (xy 139.7 129.54) (xy 139.7 142.24))
     (stroke (width 0.1524) (type solid))
     (uuid fcc8e679-c62d-4b26-87ce-750bd15156cc)
@@ -1656,7 +1658,7 @@
     )
     (pin "1" (uuid 5dc64947-44de-46e7-98d1-e61a1a5ba4d9))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "H3") (unit 1)
         )
@@ -1681,7 +1683,7 @@
     )
     (pin "1" (uuid 63ce12b4-e2b1-4542-914b-9b6c4a334395))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR02") (unit 1)
         )
@@ -1707,7 +1709,7 @@
     (pin "1" (uuid d0c45211-4516-4024-ab5b-93273823670b))
     (pin "2" (uuid ee074889-0742-40d8-9beb-0f84fad129c1))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "R2") (unit 1)
         )
@@ -1732,7 +1734,7 @@
     )
     (pin "1" (uuid e229c437-93d7-478e-b7c0-04f431da058a))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#GND05") (unit 1)
         )
@@ -1758,7 +1760,7 @@
     (pin "1" (uuid 3292ef93-f45b-44f6-ad87-08a24939c34b))
     (pin "2" (uuid 0337ee86-3de2-4b3e-85ba-b5729792d9c3))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "R3") (unit 1)
         )
@@ -1784,7 +1786,7 @@
     (pin "1" (uuid 19c7cda3-5a44-42ce-9489-689e2636c764))
     (pin "2" (uuid a669b301-83a4-4907-a265-1c9f4df6264e))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "R1") (unit 1)
         )
@@ -1829,7 +1831,7 @@
     (pin "B02" (uuid 16da0c2e-e249-4bba-b6ab-627bf8ed6b09))
     (pin "B03" (uuid c73fd88c-c305-4312-89ff-72ad40916a47))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "U$2") (unit 1)
         )
@@ -1870,7 +1872,7 @@
     (pin "1" (uuid fa2c3501-dd89-47fd-a916-e8158f4d303d))
     (pin "2" (uuid 1a2351d6-6577-4dff-b3d8-dffb41930200))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "Y1") (unit 1)
         )
@@ -1900,7 +1902,7 @@
     (pin "5" (uuid e3a343d3-11b5-4459-b725-c5ac43847a7d))
     (pin "6" (uuid a2c2b86b-bb24-4397-b22c-462f888e0469))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "J2") (unit 1)
         )
@@ -1926,7 +1928,7 @@
     (pin "1" (uuid 82514052-6f1d-48b6-bae6-7ea1b094c14d))
     (pin "2" (uuid 57488598-e2c0-4176-ab53-9e1c2d6c95e3))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "C2") (unit 1)
         )
@@ -1951,7 +1953,7 @@
     )
     (pin "1" (uuid 192c5d89-98f2-4947-a01b-78f85892c2eb))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR05") (unit 1)
         )
@@ -1976,7 +1978,7 @@
     )
     (pin "1" (uuid 30b55f29-1d98-41d0-83d8-5a409a6f050e))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#SUPPLY02") (unit 1)
         )
@@ -2014,7 +2016,7 @@
     (pin "8" (uuid 7b4ca741-9315-48ef-9699-eeccb8ba7da9))
     (pin "9" (uuid 529a2a85-24fd-44ab-a896-07a6a450dbdd))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "U1") (unit 1)
         )
@@ -2040,7 +2042,7 @@
     (pin "1" (uuid ecbdce74-2864-4ca1-bad0-5d40614eaeef))
     (pin "2" (uuid eb1876b3-1c67-44a2-a88c-b9c3ee865980))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "R4") (unit 1)
         )
@@ -2065,7 +2067,7 @@
     )
     (pin "1" (uuid d5eb1720-5af3-42c2-abca-1de83ecc8022))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "H4") (unit 1)
         )
@@ -2091,7 +2093,7 @@
     (pin "1" (uuid 54d46919-0022-466c-bd20-a292a9d3f878))
     (pin "2" (uuid 4afe9e11-5549-45df-8dbb-38cb829a4983))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "LED1") (unit 1)
         )
@@ -2116,7 +2118,7 @@
     )
     (pin "1" (uuid 4bca0324-41d8-4e0f-a831-859f596dc731))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "H2") (unit 1)
         )
@@ -2145,7 +2147,7 @@
     (pin "01" (uuid d19972c2-dc98-4b9f-ab3d-e65f6b9ef9ba))
     (pin "03" (uuid 3ca30c26-6ea9-4c41-875b-ea3bfb0cda8c))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "U$1") (unit 1)
         )
@@ -2168,14 +2170,14 @@
     (property "Datasheet" "SM06B-SRSS-TBLFSN" (at 214.63 82.55 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
-    (pin "1" (uuid e965bda1-6544-48bc-9ff3-1286bad7fc4d))
-    (pin "2" (uuid 78253f6f-27b5-4bb7-b70e-a70f5bcc5977))
-    (pin "3" (uuid 2421856f-6355-45ea-8085-bea0301526c3))
-    (pin "4" (uuid 2f04821a-3366-463c-be2d-8bb09d0a1c20))
-    (pin "5" (uuid 19926349-e140-432c-bae5-b7e70a227d9f))
-    (pin "6" (uuid 53479109-c7f7-4c90-a029-54db747304a5))
+    (pin "1" (uuid 655e828b-c3f5-484a-8aee-1b21ee5c3d35))
+    (pin "2" (uuid 0709cc96-08bc-47c8-9f8a-84c3ed126cb1))
+    (pin "3" (uuid e8a41392-c8c2-4bab-af82-6f88abce9d4d))
+    (pin "4" (uuid bc041f36-cf84-459d-91a2-02e97c619024))
+    (pin "5" (uuid 89e6449a-202f-47af-a3b9-fc0f64a9a21b))
+    (pin "6" (uuid 974d9e6a-3bec-4f38-8547-24b7e4263060))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "JP1") (unit 1)
         )
@@ -2201,7 +2203,7 @@
     (pin "1" (uuid 0da46943-27e8-4eea-a8be-627a5c308499))
     (pin "2" (uuid f81fdc59-c41a-4f78-ad5f-1acd74973bfa))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "C1") (unit 1)
         )
@@ -2226,7 +2228,7 @@
     )
     (pin "1" (uuid 3fce9e7d-7730-40bf-b35f-30fd10981430))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR07") (unit 1)
         )
@@ -2251,7 +2253,7 @@
     )
     (pin "1" (uuid f9c22fff-71b0-45e5-aee0-816276032ed1))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#GND02") (unit 1)
         )
@@ -2276,7 +2278,7 @@
     )
     (pin "1" (uuid de6abdd3-d0de-4004-97cb-e0a31fe6a068))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#GND03") (unit 1)
         )
@@ -2302,7 +2304,7 @@
     (pin "1" (uuid 1d446273-e3f3-4336-b17b-5dbc3201fa4b))
     (pin "2" (uuid b7c84e6e-0db2-4628-a6d6-94119d165229))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "LED3") (unit 1)
         )
@@ -2310,24 +2312,24 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 204.47 95.25 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 204.47 97.79 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 999c9155-680e-46f7-8844-420720f997d6)
-    (property "Reference" "#GND06" (at 204.47 95.25 0)
+    (property "Reference" "#GND06" (at 204.47 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 201.93 100.33 0)
+    (property "Value" "GND" (at 201.93 102.87 0)
       (effects (font (size 1.778 1.5113)) (justify left bottom))
     )
-    (property "Footprint" "" (at 204.47 95.25 0)
+    (property "Footprint" "" (at 204.47 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 204.47 95.25 0)
+    (property "Datasheet" "" (at 204.47 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 4b31a9ed-99de-4cad-9c9c-0df7cd69e19a))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#GND06") (unit 1)
         )
@@ -2352,7 +2354,7 @@
     )
     (pin "1" (uuid ed9ca53c-9e90-474b-aea0-8751ce0d7473))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "H1") (unit 1)
         )
@@ -2377,7 +2379,7 @@
     )
     (pin "1" (uuid 2c4dce90-b521-4a0a-8f37-64bfcffa469f))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#GND04") (unit 1)
         )
@@ -2403,7 +2405,7 @@
     (pin "1" (uuid 691684a8-1837-4424-a87c-b606755981bd))
     (pin "2" (uuid 2c5b2d3d-f1a0-45a8-8e7a-bab6adb45998))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "C3") (unit 1)
         )
@@ -2428,7 +2430,7 @@
     )
     (pin "1" (uuid 5e5ac3da-09bb-400f-a248-b3500c7eeb5f))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR06") (unit 1)
         )
@@ -2453,7 +2455,7 @@
     )
     (pin "1" (uuid 8b17ef52-9b53-4e5b-9dc4-964a9e4c83ec))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR03") (unit 1)
         )
@@ -2479,7 +2481,7 @@
     (pin "1" (uuid 592f1de0-4a75-419e-8f72-edb75b7abc95))
     (pin "2" (uuid ccbc2867-77fd-458f-b7cd-467bf52bd21a))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "LED2") (unit 1)
         )
@@ -2504,7 +2506,7 @@
     )
     (pin "1" (uuid 6632ac26-7a38-4e77-8769-cb9b9b8e469c))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR01") (unit 1)
         )
@@ -2529,7 +2531,7 @@
     )
     (pin "1" (uuid a832d73d-8d6c-4884-960f-f4aa1539fff6))
     (instances
-      (project "v1"
+      (project "micro-wwvb"
         (path "/0698b203-d306-49cd-9716-178d2bad6c05"
           (reference "#PWR04") (unit 1)
         )

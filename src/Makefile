@@ -41,7 +41,7 @@ program: $(PROJECT).hex
 
 .PHONY: program-fuses
 program-fuses:
-	$DBIN/avrdude -p $(PARTNO) -P com3 -C$(DCONF) -c $(PROGRAMMER) -b $(BAUD) -U lfuse:w:0x5E:m
+	$(DBIN)/avrdude -p $(PARTNO) -P com3 -C$(DCONF) -c $(PROGRAMMER) -b $(BAUD) -U lfuse:w:0x5E:m
 
 .PHONY: clean
 clean:

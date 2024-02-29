@@ -7,7 +7,7 @@
 
 // Define this if the gps module should
 // be ignored, and we just send a fixed time.
-#define SEND_TEST
+//define SEND_TEST
 
 #if (F_CPU != 20000000)
 #error "Only 20 MHz CPU supported"

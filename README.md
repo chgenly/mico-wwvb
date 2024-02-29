@@ -37,7 +37,7 @@ For my open source schematic/PCB editor I chose [KiCad].  I had never used it be
 Install the Freerouting plugin.
 1. Open KiCad Project Manager
 1. Click on Plugin and Content Manager
-1. Fine Freerouting
+1. Find Freerouting
 1. Click on install
 1. Click on Apply Pending Changes.
 1. You will have to have Java installed for it to work.
@@ -144,7 +144,7 @@ Make sure to disconnnect the ferrite loop antenna during programming.
 - Select board: arduino uno
 - Select comm: comm3 (for me)
 - File / Examples/ Arduino ISP /ArduinoISP
-- Upload
+- Sketch / Upload
 
 ## Test program to make blue and green leds flash
 
@@ -213,11 +213,3 @@ After startup, if the blue light is stuck on,
 you are receiving something from the GPS module, but the Initial '$' isn't being received.
 
 If everything is working, you should see the Green light go solid, and the blue light flash.
-
-# Debug
-
-Download avr8 toolchain.  This will provide gdb.
-https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers
-
-PlatformIO IDE extension
-Embedded: Atmel AVR
