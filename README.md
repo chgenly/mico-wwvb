@@ -206,10 +206,11 @@ The LEDS will indicated status
 | Failure to receive expected response from GPS module                   | Green on for .1 seconds. |
 | While transmitting WWVB signal                                         | Blue on for powered portion of the signal |
 
-After startup, if the green light is stuck on,
+After startup, if the green and blue lights are stuck on,
 you are not receiving anything from the GPS module.
 
-After startup, if the blue light is stuck on, 
+After startup, if only the blue light is stuck on, 
 you are receiving something from the GPS module, but the Initial '$' isn't being received.
 
-If everything is working, you should see the Green light go solid, and the blue light flash.
+If everything is working, you should see the Green light go solid, and the blue light flash
+slowly with wwvb time data.
