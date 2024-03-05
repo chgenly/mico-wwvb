@@ -12,3 +12,4 @@ void led_begin_wait_for_start_bit();
 void led_end_wait_for_start_bit();
 void led_begin_wait_for_dollar();
 void led_end_wait_for_dollar();
+void led_debug(int n);
