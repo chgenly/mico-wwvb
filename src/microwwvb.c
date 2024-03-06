@@ -57,8 +57,6 @@ int main() {
         led_loop_top();
 #ifndef SEND_TEST
         int ret = gps_get_time(
-            &GPS_PORT,
-            GPS_PORT_NUM,
             &GPS_PIN,
             GPS_PIN_NUM,
             GPS_BAUD_RATE,

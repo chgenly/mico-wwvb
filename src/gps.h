@@ -10,8 +10,6 @@ void gps_init(volatile unsigned char *port, unsigned char num, baud_rate rate);
 // returns negative number on error, in which case, out parameters aren't
 // defined
 int gps_get_time(
-    volatile unsigned char *port,
-    unsigned char port_num,
     volatile unsigned char *pin,
     unsigned char pin_num,
     baud_rate rate,

@@ -214,3 +214,25 @@ you are receiving something from the GPS module, but the Initial '$' isn't being
 
 If everything is working, you should see the Green light go solid, and the blue light flash
 slowly with wwvb time data.
+
+## Changes
+
+### Board
+My first attempt at the board was incorrect.  I got the order of the pins on the GPS connector backwards.  I didn't
+realize the plug would have to be turned upside down to fit into the connector.  I fixed this for my
+purposes by using a reversing cable.  
+
+I have updated the KiCAD files to fix the pin ordering problem.   The images of the schematic and
+the board have been updated too.  However, I'v never had these boards manufactured, and so never 
+tested the latest board design.  I don't expect you will have problems, but if you do, you can start looking there.
+
+### GPS module
+
+The original GPS modules was the EM-506.  Due to the pin ordering problem, I
+burned out the GPS module.  When I went to reorder it, it wasn't available.
+It had been changed to the EM-506N5.  They are largely compatible.  However
+the module is no longer initialized using $PSRF commands, instead a
+proprietary command, $PAIR, is used.  The software and the bill of materials
+has been updated to reflect the new module.
+ 
+
