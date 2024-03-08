@@ -16,6 +16,23 @@ void led_loop_top() {
     }
 }
 
+void led_error() {
+    for(int i=0; i<2; ++i) {
+        G_ON;
+        B_OFF;
+         _delay_ms(D);
+        G_OFF;
+        _delay_ms(D);
+    }
+    for(int i=0; i<2; ++i) {
+        G_OFF;
+        B_ON;
+         _delay_ms(D);
+        B_OFF;
+        _delay_ms(D);
+    }
+}
+
 void flash_green() {
     B_OFF;
     for(int i=0; i<10; ++i) {

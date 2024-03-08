@@ -4,7 +4,7 @@
 #define B_OFF LED_B_PORT &= ~ (1 << LED_B_PORT_NUM)
 
 void led_loop_top();
-
+void led_error();
 void flash_green();
 void flash_blue();
 

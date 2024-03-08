@@ -68,9 +68,7 @@ int main() {
             &second
         );
         if (ret < 0) {
-            G_ON;
-            _delay_ms(100);
-            G_OFF;
+            led_error();
             continue; // failed, try again
         }
 #else

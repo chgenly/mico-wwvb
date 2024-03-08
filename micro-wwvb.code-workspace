@@ -8,7 +8,8 @@
 		"files.associations": {
 			"io.h": "c",
 			"led.h": "c",
-			"stdbool.h": "c"
+			"stdbool.h": "c",
+			"hardware.h": "c"
 		}
 	}
 }

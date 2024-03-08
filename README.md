@@ -4,6 +4,8 @@
 to automatically set the time on radio synchronized clocks and wristwatches where the regular [WWVB] signal isn’t available. The system acquires
 the correct time via GPS.
 
+If you are interested in building a WWVB transmitter, I recommend you look at [pico wwvb](https://github.com/chgenly/pico-wwwvb).  It's much cheaper to build, and a lot less work.
+
 ![alt text](images/schematic.png)
 
 ![alt text](images/board.png)
@@ -199,11 +201,11 @@ The LEDS will indicated status
 
 | Time | LED states |
 |------|-----|
-| Program startup / top of loop                                          | Green and blue on for .1 seconds |
+| Program startup / top of loop                                          | Green and blue flash three times |
 | Waiting for start bit from GPS modules                                 | Green  |
 | Searching for the '$' at the start of the response from the GPS module | Blue |
-| Complete response received from GPS module                             | Green on |
-| Failure to receive expected response from GPS module                   | Green on for .1 seconds. |
+| Complete time response received from GPS module                             | Green on |
+| Failure to receive expected response from GPS module                   | Green blinks twice, then blue blinks twice. |
 | While transmitting WWVB signal                                         | Blue on for powered portion of the signal |
 
 After startup, if the green and blue lights are stuck on,
