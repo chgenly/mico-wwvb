@@ -221,8 +221,8 @@ slowly with wwvb time data.
 
 ### Board
 My first attempt at the board was incorrect.  I got the order of the pins on the GPS connector backwards.  I didn't
-realize the plug would have to be turned upside down to fit into the connector.  I fixed this for my
-purposes by using a reversing cable.  
+realize the cable that came with the GPS module was a reversing cable.  I fixed this for my
+purposes by using a non-reversing cable.  
 
 I have updated the KiCAD files to fix the pin ordering problem.   The images of the schematic and
 the board have been updated too.  However, I'v never had these boards manufactured, and so never 

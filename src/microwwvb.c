@@ -49,6 +49,9 @@ static inline int is_daylight_savings_time(int day, int month, int year);
 
 int main() {
     init();
+
+    // Give the GPS module a chance to start, then initialize it.
+    _delay_ms(1000);
     gps_init(&GPS_PORT, GPS_PORT_NUM, GPS_BAUD_RATE);
 
     int hour, minute, second, day, month, year;

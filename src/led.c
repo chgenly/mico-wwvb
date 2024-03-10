@@ -17,6 +17,7 @@ void led_loop_top() {
 }
 
 void led_error() {
+         _delay_ms(1000);
     for(int i=0; i<2; ++i) {
         G_ON;
         B_OFF;
@@ -31,6 +32,7 @@ void led_error() {
         B_OFF;
         _delay_ms(D);
     }
+    _delay_ms(1000);
 }
 
 void flash_green() {
