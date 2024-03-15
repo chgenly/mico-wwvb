@@ -217,6 +217,22 @@ you are receiving something from the GPS module, but the Initial '$' isn't being
 If everything is working, you should see the Green light go solid, and the blue light flash
 slowly with wwvb time data.
 
+## Mechanical
+
+To mount the gps module, which has no screw holes, I used a strap cut from a Fiji water bottle.  The Fiji bottle was rectangular, so I could cut out 
+a relatively flat piece of plastic.  I created a template
+in Gimp (image editor) and used a sharp craft knife to cut the plastic.
+
+Here's the strap:
+![GPS strap](images/gps_strap.jpg)
+
+You can see how the central hole is sized for the GPS module.
+![GPS strap on GPS module](images/gps_strap_on_gps.jpg)
+
+I'll drill small holes in the tabs for screws.
+
+I used a plastic food container as the case for the project.
+
 ## Changes
 
 ### Board
