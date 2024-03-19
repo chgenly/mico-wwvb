@@ -232,7 +232,7 @@ You can see how the central hole is sized for the GPS module.
 I'll drill small holes in the tabs for screws.
 
 I used a plastic food container as the case for the project.
-
+![micro-wwvb in a case](images/micro-wwvb-in-case.jpg)
 ## Changes
 
 ### Board
